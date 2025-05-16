@@ -33,4 +33,13 @@ public:
         // step 2:Assign value to the data fields
         newNode->noMhs = nim;
 
+        // step 3: insert at beginning if list is empty pr nim is smallest
+        if (START == NULL || nim <= START->noMhs)
+        {
+            if (START != NULL && nim == START->noMhs)
+            {
+                cout << "\nDuplicate number not allowes" << endl;
+                return;
+            }
+
 }
