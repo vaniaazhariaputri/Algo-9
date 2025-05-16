@@ -38,9 +38,10 @@ public:
         {
             if (START != NULL && nim == START->noMhs)
             {
-                cout << "\nDuplicate number not allowes" << endl;
-                return;
-            }
+                if (START != NULL && nim == START->noMhs)
+                {
+                    cout << "\nDuplicate number not allowed" << endl;
+                    return; 
         }
 
         // step 4: newNode.next = START
@@ -68,7 +69,7 @@ public:
 
     if (current->next != NULL && nim == current->next->noMhs)
     {
-        cout << "\1nDuplicate roll numbers not allowed" << endl;
+        cout << "\nDuplicate roll numbers not allowed" << endl;
         return;
     }
 
@@ -92,4 +93,21 @@ public:
             }
 
         }
+
+        cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+            int rollNo;
+            cin >> rollNo;
+
+            Node *current = START;
+
+            // step 1: Traverse the list to find the node
+            while (current != NULL && current->noMhs != rollNo)
+                current = current->next;
+
+                if (current == NULL)
+                {
+                    cout << " Record not found" << endl;
+                    return;
+                }
+            }
 
